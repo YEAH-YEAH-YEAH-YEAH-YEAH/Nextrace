@@ -6,11 +6,17 @@ Un réseau social moderne avec système de permissions avancé, messages privés
 
 ## 🎬 Démo
 
-🚀 **[Guide de démarrage rapide](QUICKSTART.md)** | 📖 **[Guide de déploiement complet](DEPLOY.md)**
+🚀 **[Guide de démarrage rapide](QUICKSTART.md)** | 📖 **[Guide de déploiement complet](DEPLOY.md)** | 🔧 **[Dépannage Render](TROUBLESHOOTING.md)**
 
 ![Loading Animation](https://img.shields.io/badge/Loading-Animated-blueviolet?style=for-the-badge)
-![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js)
+![Node.js](https://img.shields.io/badge/Node.js-20.x-green?style=for-the-badge&logo=node.js)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+
+---
+
+### 🔥 Erreur sur Render ? → **[FIX RAPIDE (30 sec)](FIX-RENDER.md)**
+
+---
 
 ## ✨ Fonctionnalités
 
@@ -47,7 +53,8 @@ Un réseau social moderne avec système de permissions avancé, messages privés
 ## 🚀 Installation
 
 ### Prérequis
-- Node.js 14+ et npm
+- Node.js 20.x (LTS) et npm
+- ⚠️ **Important** : Utilisez Node.js 20, pas la version 26 (incompatibilité avec better-sqlite3)
 
 ### Étapes d'installation
 
@@ -68,6 +75,13 @@ npm run dev
 
 3. **Accéder à l'application**
 Ouvrez votre navigateur sur : `http://localhost:3000`
+
+## 🌐 Déploiement sur Render
+
+👉 **[Guide complet de déploiement](DEPLOY.md)**  
+⚠️ **[Dépannage des erreurs](TROUBLESHOOTING.md)**
+
+**Raccourci Windows** : Double-cliquez sur `deploy-github.bat`
 
 ## 📁 Structure du projet
 

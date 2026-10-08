@@ -2,11 +2,13 @@ services:
   - type: web
     name: social-network
     env: node
-    buildCommand: npm install
+    region: frankfurt
+    plan: free
+    buildCommand: npm install --build-from-source
     startCommand: npm start
     envVars:
       - key: NODE_VERSION
-        value: 18.18.0
+        value: 20.11.1
       - key: JWT_SECRET
         generateValue: true
       - key: NODE_ENV

@@ -4,6 +4,8 @@
 - Compte GitHub
 - Compte Render (gratuit sur [render.com](https://render.com))
 
+⚠️ **Important** : Render doit utiliser **Node.js 20.x** pour la compatibilité avec better-sqlite3
+
 ## 🔧 Étape 1 : Préparer GitHub
 
 ### 1.1 Initialiser Git localement
@@ -54,9 +56,11 @@ Ajoutez ces variables dans la section **Environment** :
 
 | Key | Value |
 |-----|-------|
-| `NODE_VERSION` | `18.18.0` |
+| `NODE_VERSION` | `20.11.1` |
 | `JWT_SECRET` | Cliquez sur **Generate** (ou entrez une longue chaîne aléatoire) |
 | `NODE_ENV` | `production` |
+
+⚠️ **Important** : Utilisez Node.js 20.x pour la compatibilité avec better-sqlite3
 
 ### 2.4 Déployer
 Cliquez sur **Create Web Service** 
@@ -107,6 +111,17 @@ Render active automatiquement HTTPS avec Let's Encrypt ✅
 1. Vérifiez les logs dans Render
 2. Assurez-vous que `JWT_SECRET` est défini
 3. Vérifiez que `node_modules` n'est PAS dans le dépôt Git
+4. **Si erreur better-sqlite3** : Consultez [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
+
+### Erreur de compilation better-sqlite3
+⚠️ **Solution rapide** : Utilisez Node.js 20.x au lieu de 26.x
+
+Dans Render :
+```
+NODE_VERSION = 20.11.1
+```
+
+👉 **Guide complet** : [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
 
 ### La base de données se réinitialise
 Sur le plan gratuit de Render, la base de données SQLite peut se réinitialiser lors des redéploiements. Pour une solution permanente :
