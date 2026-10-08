@@ -4,9 +4,11 @@ Un réseau social moderne avec système de permissions avancé, messages privés
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
-## 🎬 Démo
+## 🎬 Guides
 
-🚀 **[Guide de démarrage rapide](QUICKSTART.md)** | 📖 **[Guide de déploiement complet](DEPLOY.md)** | 🔧 **[Dépannage Render](TROUBLESHOOTING.md)**
+🎯 **[Premier Déploiement (Guide Complet)](FIRST-TIME-SETUP.md)** ⭐ **COMMENCEZ ICI !**  
+🚀 **[Démarrage rapide](QUICKSTART.md)** | 📖 **[Déploiement Render](DEPLOY.md)** | ✅ **[Vérification après déploiement](DEPLOYED-CHECK.md)**  
+🔧 **[Dépannage](TROUBLESHOOTING.md)** | ⚡ **[Fix Render 30s](FIX-RENDER.md)** | 📋 **[Récapitulatif](SUMMARY.md)** | 📝 **[Changelog](CHANGELOG.md)**
 
 ![Loading Animation](https://img.shields.io/badge/Loading-Animated-blueviolet?style=for-the-badge)
 ![Node.js](https://img.shields.io/badge/Node.js-20.x-green?style=for-the-badge&logo=node.js)

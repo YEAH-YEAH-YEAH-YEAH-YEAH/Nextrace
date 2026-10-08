@@ -4,13 +4,20 @@ let authToken = null;
 let currentChatUser = null;
 let currentPostId = null;
 
-// API Base URL
-const API_URL = 'http://localhost:3000/api';
+// API Base URL - S'adapte automatiquement à l'environnement
+const API_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3000/api' 
+  : `${window.location.protocol}//${window.location.host}/api`;
 
 // ========== AUTHENTIFICATION ==========
 async function login() {
   const email = document.getElementById('login-email').value;
   const password = document.getElementById('login-password').value;
+
+  if (!email || !password) {
+    alert('Veuillez remplir tous les champs');
+    return;
+  }
 
   try {
     const response = await fetch(`${API_URL}/auth/login`, {
@@ -31,7 +38,8 @@ async function login() {
       alert(data.error || 'Erreur de connexion');
     }
   } catch (error) {
-    alert('Erreur réseau: ' + error.message);
+    console.error('Erreur réseau:', error);
+    alert('Impossible de se connecter au serveur. Vérifiez votre connexion internet ou réessayez dans quelques instants.');
   }
 }
 
@@ -39,6 +47,16 @@ async function register() {
   const username = document.getElementById('register-username').value;
   const email = document.getElementById('register-email').value;
   const password = document.getElementById('register-password').value;
+
+  if (!username || !email || !password) {
+    alert('Veuillez remplir tous les champs');
+    return;
+  }
+
+  if (password.length < 6) {
+    alert('Le mot de passe doit contenir au moins 6 caractères');
+    return;
+  }
 
   try {
     const response = await fetch(`${API_URL}/auth/register`, {
@@ -50,13 +68,16 @@ async function register() {
     const data = await response.json();
     
     if (response.ok) {
-      alert('Inscription réussie ! Vous pouvez vous connecter.');
+      alert('✅ Inscription réussie ! Vous pouvez maintenant vous connecter.');
       switchToLogin();
+      // Pré-remplir l'email
+      document.getElementById('login-email').value = email;
     } else {
       alert(data.error || 'Erreur d\'inscription');
     }
   } catch (error) {
-    alert('Erreur réseau: ' + error.message);
+    console.error('Erreur réseau:', error);
+    alert('Impossible de se connecter au serveur. Réessayez dans quelques instants.');
   }
 }
 

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erreur - Réseau Social</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 20px;
+    }
+    .error-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: white;
+      color: #667eea;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: transform 0.3s;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    .code {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px 0;
+      font-family: monospace;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <h1>😞</h1>
+    <h2>Oups ! Une erreur est survenue</h2>
+    
+    <p><strong>Possible cause :</strong> Le serveur est en cours de démarrage ou une erreur de configuration s'est produite.</p>
+    
+    <div class="code">
+      <p><strong>Solutions :</strong></p>
+      <p>1. Attendez 30 secondes et rafraîchissez la page</p>
+      <p>2. Vérifiez que toutes les variables d'environnement sont définies</p>
+      <p>3. Consultez les logs du serveur</p>
+    </div>
+    
+    <a href="/" class="btn">🔄 Réessayer</a>
+    
+    <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">
+      Si le problème persiste, contactez l'administrateur
+    </p>
+  </div>
+</body>
+</html>
